@@ -5,15 +5,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: nvidia
-  replicas: 1
+      app: myapp
   template:
     metadata:
       labels:
         app: myapp
     spec:
       containers:
-      - name: yolo_v5
+      - name: myapp
         image: wooks527/yolov5-jetson-nano:latest
         ports:
         - containerPort: 8080
